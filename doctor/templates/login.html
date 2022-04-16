@@ -12,7 +12,8 @@
 </head>
 <body>
     <script src="{% static 'js/login/jquery.min.js' %}"></script>
-    <script src="{% static 'js/login/script.js' %}"></script>
+    <script src="{% static 'js/login/login.js' %}"></script>
+    <script src="{% static 'js/login/register.js' %}"></script>
     <div id="formContainer" class="dwo">
         <div class="formLeft">
             <img src="{% static 'images/login/avatar.png'%}">
@@ -71,25 +72,25 @@
                 <section>
                     <label>
                         <p>用户名</p>
-                        <input type="text" placeholder=" ">
+                        <input id="register-input-name" type="text" placeholder="请输入你的用户名">
                         <div class="border"></div>
                     </label>
                     <label>
                         <p>邮箱</p>
-                        <input type="email" placeholder=" ">
+                        <input id="register-input-email" type="email" placeholder="请输入你的邮箱">
                         <div class="border"></div>
                     </label>
                     <label>
                         <p>密码</p>
-                        <input type="password" placeholder=" ">
+                        <input id="register-input-password" type="password" placeholder="请输入你的密码">
                         <div class="border"></div>
                     </label>
                     <label>
                         <p>重复密码</p>
-                        <input type="password" placeholder=" ">
+                        <input id="register-input-repassword" type="password" placeholder="请重复你的密码">
                         <div class="border"></div>
                     </label>
-                    <button type="submit">注 册</button>
+                    <button id="register-button" type="button">注 册</button>
                 </section>
                 <footer>
                     <button type="button" class="registerBtn">返回</button>

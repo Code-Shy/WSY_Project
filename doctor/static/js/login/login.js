@@ -18,7 +18,7 @@ $(function () {
                 platform: "web",
             },
             success: function (resp) {
-                if(resp.result == "success" && resp.username==username && resp.password==password){
+                if(resp.result === "success" && resp.username === username && resp.password === password){
                     window.location.href='http://127.0.0.1:8000/user';
                 }else{
                     alert("用户名或密码有错误")
@@ -27,3 +27,4 @@ $(function () {
         })
     })
 })
+
