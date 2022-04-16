@@ -9,8 +9,8 @@ class Customer(models.Model):
     phone = models.CharField(max_length=256, verbose_name='手机号')
 
     class Meta:
-        verbose_name = '客户'
-        verbose_name_plural = '客户'
+        verbose_name = '客户信息'
+        verbose_name_plural = '客户信息'
 
     def __str__(self):
         return self.username
