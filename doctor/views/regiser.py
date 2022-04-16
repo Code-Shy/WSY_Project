@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from doctor.models.customer import Customer
 
+
 def register(request):
     data = request.GET
     username = data.get("username", "").strip()
