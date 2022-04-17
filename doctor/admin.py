@@ -4,6 +4,8 @@ from doctor.models.customer import Customer
 from doctor.models.pet import Pet
 from medicine.models.storage import Storage
 from medicine.models.income import Income
+from doctor.models.register import Register
+from doctor.models.prescription import Prescription
 
 
 admin.site.site_header = '医院管理后台'
@@ -31,8 +33,18 @@ class IncomeAdmin(admin.ModelAdmin):
     list_display = ('sum', 'type', 'datatime', 'purpose', 'remark')
 
 
+class RegisterAdmin(admin.ModelAdmin):
+    list_display = ('doctor', 'time', 'price', 'customer')
+
+
+class PrescriptionAdmin(admin.ModelAdmin):
+    list_display = ('doctor', 'time', 'content', 'customer')
+
+
 admin.site.register(Doctor, DoctorAdmin)
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Pet, PetAdmin)
 admin.site.register(Storage, StorageAdmin)
 admin.site.register(Income, IncomeAdmin)
+admin.site.register(Register, RegisterAdmin)
+admin.site.register(Prescription, PrescriptionAdmin)
