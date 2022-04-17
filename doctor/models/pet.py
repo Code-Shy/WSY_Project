@@ -1,5 +1,4 @@
 from django.db import models
-from doctor.models.customer import Customer
 
 
 class Pet(models.Model):

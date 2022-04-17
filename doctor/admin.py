@@ -6,7 +6,7 @@ from medicine.models.storage import Storage
 from medicine.models.income import Income
 from doctor.models.register import Register
 from doctor.models.prescription import Prescription
-
+from doctor.models.booking import Booking
 
 admin.site.site_header = '医院管理后台'
 admin.site.site_title = '医院管理后台'
@@ -19,6 +19,10 @@ class DoctorAdmin(admin.ModelAdmin):
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ('username', 'name', 'email', 'phone')
+
+
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('time', 'customer', 'exp')
 
 
 class PetAdmin(admin.ModelAdmin):
@@ -48,3 +52,4 @@ admin.site.register(Storage, StorageAdmin)
 admin.site.register(Income, IncomeAdmin)
 admin.site.register(Register, RegisterAdmin)
 admin.site.register(Prescription, PrescriptionAdmin)
+admin.site.register(Booking, BookingAdmin)
