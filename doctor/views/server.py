@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import json
+
 
 def server(request):
     data = "hello,world"

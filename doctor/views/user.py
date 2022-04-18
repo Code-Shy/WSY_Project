@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
-def user(request):
-    return render(request, "user.html")
+
+def getuser(request):
+    pass
